@@ -6,15 +6,12 @@ const currentDay = currentDate.getDay();
 const currentDayOfweek= weekDays[currentDay]
 
 dayOfWeek.textContent = `Today is ${currentDayOfweek}`
+const currentUtc = document.getElementById('utctime')
+function Display(){
+    const currentUTCTimeInMilliseconds = new Date().getTime();
+    currentUtc.textContent = `Current UTCTime in millisecond:${currentUTCTimeInMilliseconds}`
+}
 
-function getCurrentUtcTime(){
-    const now = new Date();
-    const utcTime= now.toISOString();
-    return  utcTime;
-}
-function  Display(){
-    const utcTimeElement= document.getElementById('utctime')
-    const utcTime = getCurrentUtcTime();
-    utcTimeElement.textContent= `Current UTC Time:${utcTime}`
-}
+
+
 window.onload= Display
