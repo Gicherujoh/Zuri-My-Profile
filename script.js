@@ -5,12 +5,12 @@ const currentDate= new Date();
 const currentDay = currentDate.getDay();
 const currentDayOfweek= weekDays[currentDay]
 
-dayOfWeek.textContent = `Today is ${currentDayOfweek}`
+dayOfWeek.textContent = `${currentDayOfweek}`
 const currentUtc = document.getElementById('utctime')
 function Display(){
     const currentUTCTimeInMilliseconds = new Date().getTime();
     
-    currentUtc.textContent = `Current UTCTime in millisecond:${currentUTCTimeInMilliseconds}`
+    currentUtc.textContent = `${currentUTCTimeInMilliseconds}`
 
 }
 setInterval(Display,1000)
